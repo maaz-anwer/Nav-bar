@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="item">
+            <h1>Calculate Your Marks<br>Get Your<br>Percentage Or Grade:</h1>
+    <div class="on">        
+         <label for="">
+        Total Marks Of Computer <br> <input type="number" id="num1">
+         </label>
+    <br>
+    <br>
+        <label for="">
+        Obtained Marks Of Computer <br> <input type="number" id="num2">
+        </label>
+    </div>
+    <br>
+    <div class="of">
+    <label for="">
+        Total Marks Of Maths <br> <input type="number" id="sec1">
+    </label>
+    <br>
+    <br>               
+    <label for="">
+       Obtained Marks Of Maths <br> <input type="number" id="sec2">
+    </label>
+    </div>
+    <br>
+    <div class="sub">
+    <label for="">
+        Total Marks Of English <br> <input type="number" id="mac1">
+    </label>
+    <br>
+    <br>               
+    <label for="">
+       Obtained Marks Of English <br> <input type="number" id="mac2">
+    </label>
+</div>
+    <br>
+    <div class="up">    
+        <label for="">
+        Total Marks Of physics <br> <input type="number" id="tec1">
+    </label>
+    <br>
+    <br>               
+    <label for="">
+        Obtained Marks Of physics <br> <input type="text" id="tec2">
+    </label>
+    </div>
+    <br>
+    <br>
+    <button onclick="Checkresult()" class="down">Check Result</button>
+    <br>
+    <br>
+    <div class="op">
+    <div id="Check"></div>
+    </div>  
+</div>
+</div>                        
+
+
+
+
+
+
+
+
+<script>
+    function Checkresult(){
+        let num1 = Number(document.getElementById("num1").value);
+        let num2 = Number(document.getElementById("num2").value);
+        let sec1 = Number(document.getElementById("sec1").value);
+        let sec2 = Number(document.getElementById("sec2").value);
+        let mac1 = Number(document.getElementById("mac1").value);
+        let mac2 = Number(document.getElementById("mac2").value);
+        let tec1 = Number(document.getElementById("tec1").value); 
+        let tec2 = Number(document.getElementById("tec2").value);
+
+
+        let TotalMarks = num1 + sec1 + mac1 + tec1;
+        let ObtainedMarks = num2 + sec2 + mac2 + tec2;
+        let Percentage = (ObtainedMarks / TotalMarks) * 100;
+    
+
+
+    if (Percentage >=95){
+        Grade = "A++"
+    }
+    else if (Percentage >=90){
+        Grade ="A+"
+    }
+    else if (Percentage >=85){
+        Grade ="A"
+    }
+    else if (Percentage >=80){
+        Grade = "B++"
+    }
+    else if (Percentage >=75){
+        Grade = "B+"
+    }
+    else if (Percentage >=70){
+        Grade = "B"
+    }
+    else if (Percentage >=60){
+        Grade = "C"
+    }
+    else if (Percentage >=50){
+        Grade = "D"
+    }
+    else if (Percentage >=40){
+        Grade = "E"
+    }
+    else if (Percentage <40){
+        Grade = "Failed"
+    }
+    let result = document.getElementById("Check")
+    result.innerHTML = `your percentage : ${Percentage.toFixed(2)}% <br> Your Grade: ${Grade}` 
+}
+</script>
+
+
+
+
+
+
+
+
+</body>
+</html>
