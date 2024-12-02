@@ -85,7 +85,7 @@
 
         let TotalMarks = num1 + sec1 + mac1 + tec1;
         let ObtainedMarks = num2 + sec2 + mac2 + tec2;
-        let Percentage = (ObtainedMarks / TotalMarks) * 100;
+        let Percentage = (ObtainedMarks / TotalMarks) * 100; 
     
 
 
@@ -120,7 +120,7 @@
         Grade = "Failed"
     }
     let result = document.getElementById("Check")
-    result.innerHTML = `your percentage : ${Percentage.toFixed(2)}% <br> Your Grade: ${Grade}` 
+    result.innerHTML = `your percentage : ${Percentage.toFixed(2)}% <br> Your Grade: ${Grade} <br> Total Marks : ${TotalMarks} <br> Obtained Marks : ${ObtainedMarks}` 
 }
 </script>
 
